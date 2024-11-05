@@ -25,7 +25,7 @@ $configurationBD = [
     'driver' => 'pdo_mysql',
     'user' => 'root',
     'password' => '',
-    'dbname' => 'db_taches',
+    'dbname' => 'db_sanctions',
     'host' => 'localhost:3306'
 ];
 
