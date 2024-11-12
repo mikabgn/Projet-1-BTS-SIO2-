@@ -27,19 +27,19 @@
                     <?php if (empty($_SESSION)) : ?>
                         <li class="nav-item ms-2">
 
-                            <a class="nav-link text-white" href="exemple.html">Connexion</a>
+                            <a class="nav-link text-white" href="index.php?route=connexion">Connexion</a>
 
                         </li>
                         <li class="nav-item ms-2">
 
-                            <a class="nav-link text-white" href="exemple.html">Crée un compte</a>
+                            <a class="nav-link text-white" href="index.php?route=creationCompte">Crée un compte</a>
 
                         </li>
                     <?php else : ?>
 
                         <li class="nav-item">
 
-                            <a class="nav-link text-white" href="exemple.html">Déconnexion</a>
+                            <a class="nav-link text-white" href="index.php?route=deconnexion">Déconnexion</a>
 
                         </li>
                     <?php endif; ?>
