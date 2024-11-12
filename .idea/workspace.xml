@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6324fee-8e2c-407f-825a-ef2db83d400c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/AccueilController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/FooterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/HeaderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/MentionsLegalesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vues/footer/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vues/header/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vues/mentionslegales/mentionslegales.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gestionDesSanctions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gestionDesSanctions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +78,9 @@
       <option name="presentableId" value="Default" />
       <updated>1730801065184</updated>
       <workItem from="1730801066526" duration="3781000" />
-      <workItem from="1730812167772" duration="5677000" />
+      <workItem from="1730812167772" duration="5974000" />
+      <workItem from="1730880742061" duration="5000" />
+      <workItem from="1731402761013" duration="762000" />
     </task>
     <servers />
   </component>

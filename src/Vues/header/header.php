@@ -10,30 +10,41 @@
     <title>Sanction GAUDPER</title>
 </head>
 <header>
-<nav class="navbar navbar-expand-lg navbar-dark text-bg-dark fixed-top">
-    <img src="asset/image/LogoGAUDPER-removebg-preview.png" style="height: 80px" class="ms-4 mb-1">
-    <h1 class="ms-2">Sanction GAUDPER</h1>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-5">
-            <li class="nav-item">
-                <a class="nav-link text-white" href="index.php?route=accueil">Accueil</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
 
-            <?php if (empty($_SESSION)) : ?>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="exemple.html">Connexion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="exemple.html">Crée un compte</a>
-                </li>
-            <?php else : ?>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="exemple.html">Déconnexion</a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </div>
-</nav>
+    <nav class='navbar navbar-expand-md bg-black fixed-top'>
+        <img src="asset/image/LogoGAUDPER-removebg-preview.png" style="height: 80px" class="ms-4 mb-1">
+        <h1 class="ms-2 text-white">Sanction GAUDPER</h1>
+        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+            <div class='collapse navbar-collapse' id='navbarNav'>
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-2">
+                        <a class="nav-link text-white" href="index.php?route=accueil">Accueil</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <?php if (empty($_SESSION)) : ?>
+                        <li class="nav-item ms-2">
+
+                            <a class="nav-link text-white" href="exemple.html">Connexion</a>
+
+                        </li>
+                        <li class="nav-item ms-2">
+
+                            <a class="nav-link text-white" href="exemple.html">Crée un compte</a>
+
+                        </li>
+                    <?php else : ?>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-white" href="exemple.html">Déconnexion</a>
+
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
