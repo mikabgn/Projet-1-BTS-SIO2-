@@ -5,6 +5,7 @@ use App\Utilitaire\Vue;
 $Vue = new Vue();
 $Vue->setMenu(new \App\Vues\Vue_Menu_Non_Connecter());
 $Vue->addToCorps(new App\Vues\Vue_Connexion());
+$Vue->afficher();
 
 if (isset($_REQUEST["connexionEmail"]) && isset($_REQUEST["connexionPassword"])){
     $email = $_REQUEST["connexionEmail"];

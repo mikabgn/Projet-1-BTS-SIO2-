@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // Controleur FRONTAL => Routeur
 // TOute les requétes des utilisateurs passent par ce fichier
 
@@ -30,10 +32,9 @@ else
 
 //Mise en place du routing
 $route = $_GET["route"] ?? 'accueil';
-//$headerController = new \App\Controllers\HeaderController();
-//$headerController->header();
+$headerController = new \App\Controllers\HeaderController();
+$headerController->header();
 $Vue = new Vue();
-
 
 
 
@@ -46,11 +47,11 @@ switch ($route) {
         $mentionsLegalesController = new \App\Controllers\MentionsLegalesController();
         $mentionsLegalesController->mentionsLegales();
         break;
-    case "connexion":
-        include "../src/Controllers/Non_connecter.php";
+    case "creationCompte":
+        include "../src/Controllers/creationCompte.php";
         break;
-    case "Nonconnexion":
-        include "../src/Controllers/connecter.php";
+    case "connexion":
+        include "../src/Controllers/connexionCompte.php";
         break;
     case 'deconnexion':
         $mentionsLegalesController = new \App\Controllers\MentionsLegalesController();
@@ -71,7 +72,7 @@ switch ($route) {
 */
 
 }
-$Vue -> afficher();
+
 
 $footerController = new \App\Controllers\FooterController();
 $footerController->footer();
