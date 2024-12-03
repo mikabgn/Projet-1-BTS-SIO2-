@@ -8,7 +8,7 @@ $entityManager = require __DIR__ . "/../config/bootstrap.php";
 $user = new createAccount($entityManager);
 
 try{
-    $user->execute("nom","prenom","nom.prenom@moi.com","motDePAsse");
+    $user->execute("test","test","test@test.com","mdptaze9Ae");
 
 }catch (\Exception $e){
     echo $e->getMessage();

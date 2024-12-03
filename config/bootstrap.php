@@ -19,7 +19,7 @@ $configurationBD = [
     'user' => 'root',
     'password' => '',
     'dbname' => 'db_sanctions',
-    'host' => 'localhost:3306'
+    'host' => 'localhost'
 ];
 
 // Créer de la connexion à la base de données

@@ -2,20 +2,18 @@
 
 namespace App\Controller;
 
+use App\UserStory\ConnectAccount;
 use App\UserStory\CreateAccount;
+use Doctrine\ORM\EntityManager;
 
 class SanctionsController extends AbstractController
 {
     private array $sanctions = [];
-    public function __construct()
+    private EntityManager $entityManager;
+    public function __construct(EntityManager $entityManager)
     {
-
-        // Simuler une base de données avec une session
         session_start();
-        if (!isset($_SESSION['sanctions'])) {
-            $_SESSION['sanctions'] = [];
-        }
-        $this->sanctions = &$_SESSION['sanctions'];
+        $this->entityManager=$entityManager;
     }
     public function index(): void
     {
@@ -25,7 +23,9 @@ class SanctionsController extends AbstractController
     }
     public function inscription(): void
     {
-        $entityManager=require_once __DIR__."/../../config/bootstrap.php";
+        if (isset($_SESSION['utilisateur'])) {
+            $this->redirect('/');
+        }
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nom = $_POST['nom'];
             $prenom = $_POST['prenom'];
@@ -35,7 +35,7 @@ class SanctionsController extends AbstractController
 
                 try {
                     // Tenter de créer un compte
-                    $user = new CreateAccount($entityManager);
+                    $user = new CreateAccount($this->entityManager);
                     $user->execute($nom,$prenom, $email, $password, $confirmPassword);
                     $this->redirect('/connexion');
                 } catch (\Exception $e) {
@@ -44,9 +44,38 @@ class SanctionsController extends AbstractController
                 }
 
         }
-        $this->render('Sanctions/inscription');
+        $this->render('Sanctions/inscription', ['erreurs' => $erreurs ?? null,]);
     }
     public function connexion(): void {
-        $this->render('Sanctions/connexion');
+        if (isset($_SESSION['utilisateur'])) {
+            $this->redirect('/');
+        }
+        if (isset($_SESSION['mail'])){
+            $this->redirect('/');;
+            exit();
+        }else{
+            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                $erreurs = "";
+                try {
+                    $user= new ConnectAccount($this->entityManager);
+                    $user->execute($_POST["email"],$_POST["password"]);
+                }catch(\Exception $e){
+                    $erreurs = $e->getMessage();
+                }
+                if ($erreurs==""){
+                    $this->redirect("/");
+                    exit();
+                }
+            }
+        }
+        $this->render('Sanctions/connexion', ['erreurs' => $erreurs ?? null,]);
+    }
+    public function deconnexion(): void {
+        if (isset($_SESSION['utilisateur'])) {
+            session_destroy();
+            session_start();
+            $this->redirect('/');
+        }
+        $this->redirect('/');
     }
 }

@@ -1,57 +1,43 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href='assets/css/bootstrap.min.css' rel='stylesheet'>
-    <script src='assets/js/bootstrap.min.js'></script>
-    <title>Inscription</title>
-</head>
-<body>
-<div class="container mt-5">
-    <h1 style="margin-top: 100px">Inscription</h1>
 
-    <form action="" method="POST" class="mt-4">
+
+<body style="margin-top: 100px">
+<div class=" container mt-5 ">
+    <h1 class="text-center">Inscription</h1>
+
+    <form action="/inscription" method="POST" class="mx-auto mt-4 w-50">
         <?php if (isset($erreurs)): ?>
             <p class="form-text text-danger"><?= $erreurs ?></p>
         <?php endif; ?>
         <div class="mb-3">
-            <label for="nom" class="form-label">Nom *</label>
-            <input type="nom" class="form-control <?= (isset($erreurs["nom"])) ? "border border-2 border-danger" : "" ?>"
-                   name="nom"
-                   id="nom"
-                   placeholder="Un nom cool"
-                   value=<?=(!empty($erreurs)) ? $_POST["nom"] : "" ?>
-                   >
-            <?php if (isset($erreurs["nom"])): ?>
-                <p class="form-text text-danger"><?= $erreurs["nom"] ?></p>
-            <?php endif; ?>
-        </div>
-        <div class="mb-3">
             <label for="prenom" class="form-label">Prénom *</label>
-            <input type="prenom" class="form-control <?= (isset($erreurs["prenom"])) ? "border border-2 border-danger" : "" ?>"
+            <input type="text" class="form-control "
                    name="prenom"
                    id="prenom"
-                   placeholder="Un prenom cool"
-                   value=<?=(!empty($erreurs)) ? $_POST["prenom"] : "" ?>>
-            <?php if (isset($erreurs["prenom"])): ?>
-                <p class="form-text text-danger"><?= $erreurs["prenom"] ?></p>
-            <?php endif; ?>
-        </div>
+                   placeholder="un prenom cool"
+                   value=<?=(!empty($erreurs)) ? $_POST["prenom"] : "" ?>
+            >
 
+        </div>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom *</label>
+            <input type="text" class="form-control"
+                   name="nom"
+                   id="nom"
+                   placeholder="un nom cool"
+                   value=<?=(!empty($erreurs)) ? $_POST["nom"] : "" ?>
+                   >
+        </div>
         <div class="mb-3">
             <label for="Email" class="form-label">Email *</label>
             <input type="email"
-                   class="form-control <?= (isset($erreurs["email"])) ? "border border-2 border-danger" : "" ?>"
+                   class="form-control"
                    name="email"
                    id="Email"
-                   placeholder="UnMailCool@gmail.com"
+                   placeholder="unMailCool@gmail.com"
                    aria-describedby="emailHelp"
-                   value=<?=(!empty($erreurs)) ? $_POST["email"] : "" ?>>
-            <?php if (isset($erreurs["email"])): ?>
-                <p class="form-text text-danger"><?= $erreurs["email"] ?></p>
-            <?php endif; ?>
-            <div id="emailHelp" class="form-text text-light">Nous ne divulguerons jamais votre adresse email</div>
+                   value=<?=(!empty($erreurs)) ? $_POST["email"] : "" ?>
+            >
+            <div id="emailHelp" class="form-text text-light">Nous ne divulgurons jamais votre adresse email</div>
         </div>
 
         <div class="mb-3">
@@ -88,4 +74,3 @@
     <a href="/connexion" class="text-white btn btn-link mt-3">Déjà inscrit ? Connectez-vous</a>
 </div>
 </body>
-</html>
