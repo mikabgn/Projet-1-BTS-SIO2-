@@ -1,15 +1,12 @@
 {
-    "name": "bougnonm/gestion-des-sanctions",
+    "name": "nguyenp/projet-sanctions",
     "autoload": {
         "psr-4": {
-            "App": "src/"
+            "App\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "mikabgn",
-            "email": "mika.bougnon@yahoo.com"
-        }
-    ],
-    "require": {}
+    "require": {
+        "symfony/cache": "^7.1",
+        "doctrine/orm": "^3.3"
+    }
 }

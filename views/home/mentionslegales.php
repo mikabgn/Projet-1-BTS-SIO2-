@@ -1,5 +1,17 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet'>
+    <script src='assets/js/bootstrap.min.js'></script>
+    <title>Mentions Légales</title>
+</head>
+</head>
 <body>
-<div class="container py-5" style="margin-bottom: 175px; margin-top: 60px">
+<div class='container py-5' style='margin-top: 70px; margin-bottom: 130px'>
     <h1>Mentions légales</h1>
     <h2>Éditeur du site</h2>
     <p>Nom de l'entreprise<br>
@@ -14,7 +26,7 @@
         Email : support@hebergeur.fr</p>
 
     <h2>Conditions générales d'utilisation</h2>
-    <p>Les présentes conditions générales d'utilisation (ci-après dénommées "CGU") ont pour objet de définir les modalités et les conditions d'utilisation du site internet Sanction GAUDPER (ci-après dénommé "le Site") par l'Utilisateur.</p>
+    <p>Les présentes conditions générales d'utilisation (ci-après dénommées 'CGU') ont pour objet de définir les modalités et les conditions d'utilisation du site internet Sanction GAUDPER (ci-après dénommé 'le Site') par l'Utilisateur.</p>
 
     <h3>Article 1 - Acceptation des CGU</h3>
     <p>L'accès et l'utilisation du Site sont soumis à l'acceptation et au respect des présentes CGU. En accédant et en utilisant le Site, l'Utilisateur déclare accepter sans réserve les présentes CGU. En cas de non-acceptation des CGU, l'Utilisateur est invité à renoncer à l'accès et à l'utilisation du Site.</p>
@@ -22,10 +34,10 @@
     <h3>Article 2 - Définitions</h3>
     <p>Dans les présentes CGU, les termes ci-dessous ont les significations suivantes :</p>
     <ul>
-        <li>"Utilisateur" : toute personne physique ou morale qui accède et utilise le Site.</li>
-        <li>"Contenu Utilisateur" : tout contenu, notamment textes, images, vidéos, sons, informations, données, etc., publié par l'Utilisateur sur le Site.</li>
-        <li>"Contenu Éditeur" : tout contenu, notamment textes, images, vidéos, sons, informations, données, etc., publié par l'Éditeur sur le Site.</li>
-        <li>"Éditeur" : la personne morale ou physique responsable de l'édition et de la gestion du Site.</li>
+        <li>'Utilisateur' : toute personne physique ou morale qui accède et utilise le Site.</li>
+        <li>'Contenu Utilisateur' : tout contenu, notamment textes, images, vidéos, sons, informations, données, etc., publié par l'Utilisateur sur le Site.</li>
+        <li>'Contenu Éditeur' : tout contenu, notamment textes, images, vidéos, sons, informations, données, etc., publié par l'Éditeur sur le Site.</li>
+        <li>'Éditeur' : la personne morale ou physique responsable de l'édition et de la gestion du Site.</li>
     </ul>
 
     <h3>Article 3 - Accès au Site</h3>
@@ -54,5 +66,4 @@
         Email : contact@sanction-gaudper.fr</p>
 </div>
 </body>
-
-
+</html>

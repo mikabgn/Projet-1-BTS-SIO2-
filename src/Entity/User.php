@@ -1,22 +1,27 @@
 <?php
 
 namespace App\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
 #[ORM\Table(name: 'users')]
-class User
-{
+class User {
     #[ORM\Id]
-    #[ORM\Column(name: 'id_user', type: 'integer')]
+    #[ORM\Column(name:'id_user', type: 'integer')]
     #[ORM\GeneratedValue]
-    private int $id;
-    #[ORM\Column(name: 'pseudo_user', type: 'string', length: 50)]
-    private string $pseudo;
+    protected int $id;
+
+    #[ORM\Column(name: 'nom_user', type: 'string', length: 50)]
+    protected string $nom;
+    #[ORM\Column(name: 'prenom_user', type: 'string', length: 50)]
+    protected string $prenom;
+
     #[ORM\Column(name: 'email_user', type: 'string', length: 100, unique: true)]
-    private string $email;
+    protected string $email;
+
     #[ORM\Column(name: 'password_user', type: 'string')]
-    private string $password;
+    protected string $password;
 
     public function getId(): int
     {
@@ -26,6 +31,26 @@ class User
     public function setId(int $id): void
     {
         $this->id = $id;
+    }
+
+    public function getNom(): string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): void
+    {
+        $this->nom = $nom;
+    }
+
+    public function getPrenom(): string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): void
+    {
+        $this->prenom = $prenom;
     }
 
     public function getEmail(): string
@@ -48,19 +73,5 @@ class User
         $this->password = $password;
     }
 
-    public function getPseudo(): string
-    {
-        return $this->pseudo;
-    }
-
-    public function setPseudo(string $pseudo): void
-    {
-        $this->pseudo = $pseudo;
-    }
-
-    public function authenticate(string $password, callable $checkHash): bool
-    {
-        return $checkHash($password, $this->password);
-    }
 
 }

@@ -1,92 +1,29 @@
 <?php
 
-session_start();
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// Controleur FRONTAL => Routeur
-// TOute les requétes des utilisateurs passent par ce fichier
+// Récupération des routes
+$routes = require_once __DIR__ . '/../config/routes.php';
 
-use App\Controllers\AccueilController;
-use App\Controllers\HeaderController;
-use App\Controllers\FooterController;
-use App\Controllers\MentionsLegalesController;
-use App\Controllers\connexionCompte;
-use App\Utilitaire\Vue;
+// Récupération de l'URL actuelle
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-
-require_once __DIR__ . "/../vendor/autoload.php";
-
-//chargement vriables d'environnement
-
-if (isset($_REQUEST["case"]))
-    $case = $_REQUEST["case"];
-else
-    $case = "defaut";
-
-if (isset($_REQUEST["page"]))
-    $page = $_REQUEST["page"];
-else
-    $page = "defaut";
-
-
-// Configurer la connexion a la bdd
-
-//Mise en place du routing
-$route = $_GET["route"] ?? 'accueil';
-$headerController = new \App\Controllers\HeaderController();
-$headerController->header();
-$Vue = new Vue();
-
-
-
-switch ($route) {
-    case 'accueil':
-        $accueilController = new \App\Controllers\AccueilController();
-        $accueilController->accueil();
-        break;
-    case 'Mentionslegales':
-        $mentionsLegalesController = new \App\Controllers\MentionsLegalesController();
-        $mentionsLegalesController->mentionsLegales();
-        break;
-    case "creationCompte":
-        include "../src/Controllers/creationCompte.php";
-        break;
-    case "connexion":
-        include "../src/Controllers/connexionCompte.php";
-        break;
-    case 'deconnexion':
-        $mentionsLegalesController = new \App\Controllers\MentionsLegalesController();
-        $headerController = new \App\Controllers\HeaderController();
-    default :
-        //r 404
-        echo 'page not found';
-        break;
-
-/*
- case 'livre-list':
- //mivre dao est une dependance de livre controller
- $livreDAO = new \App\DAO\LivreDAO($db);
- //injection dao en bas la
- $livreController = new \App\Controllers\LivreController($livreDAO);
- $livreController->list();
- break;
-*/
-
+// Recherche de la route correspondante
+if (!isset($routes[$uri])) {
+    $errorController = new \App\Controller\ErrorController();
+    $errorController->error404();
+    exit;
 }
 
-
-$footerController = new \App\Controllers\FooterController();
-$footerController->footer();
-
-
-
-
-
-
-
-//if ($route === 'accueil') {
-//    // Créer un objet AccueilControlleur
-//    $accueilController = new \App\Controllers\AccueilController();
-//    $accueilController->accueil();
-//} else {
-//    echo 'page not found';
-//}
+// Récupération du contrôleur et de l'action
+[$controllerName, $action] = $routes[$uri];
+$controllerClass = "App\\Controller\\{$controllerName}";
+try {
+    // Instanciation du contrôleur et appel de l'action
+    $controller = new $controllerClass();
+    $controller->$action();
+} catch (\Exception $e) {
+    error_log($e->getMessage());
+    $errorController = new \App\Controller\ErrorController();
+    $errorController->error404();
+}
