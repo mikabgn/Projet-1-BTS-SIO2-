@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d200391-1646-43ba-bdda-9fd3202504d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projet-sanctions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet-sanctions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SanctionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SanctionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/createAccountTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/createAccountTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/sanctions/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/sanctions/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/sanctions/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/sanctions/inscription.php" afterDir="false" />
-    </list>
+    <list default="true" id="6d200391-1646-43ba-bdda-9fd3202504d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,6 +103,7 @@
       <workItem from="1733231828392" duration="3238000" />
       <workItem from="1733237033108" duration="197000" />
       <workItem from="1733237256138" duration="44000" />
+      <workItem from="1733237331034" duration="78000" />
     </task>
     <servers />
   </component>
