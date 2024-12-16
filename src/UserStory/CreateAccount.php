@@ -33,7 +33,7 @@ class CreateAccount
 
         // Vérifier l'unicité de l'email
         if ($this->entityManager->getRepository(User::class)->findOneBy(['email' => $email])) {
-            throw new \Exception("L'email est déjà utilisé.");
+            throw new \Exception("L'email est déjà utilisée.");
         }
         if($password !== $confirmPassword) {
             throw new \Exception("Les mots de passe ne correspondent pas.");
@@ -43,6 +43,10 @@ class CreateAccount
 
         // Créer une instance de la classe User avec l'email, le pseudo et le mot de passe haché
         $user = new User();
+
+
+
+
         $user->setNom($nom);
         $user->setPrenom($prenom);
         $user->setEmail($email);

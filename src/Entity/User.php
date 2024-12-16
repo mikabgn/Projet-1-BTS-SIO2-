@@ -12,9 +12,9 @@ class User {
     #[ORM\GeneratedValue]
     protected int $id;
 
-    #[ORM\Column(name: 'nom', type: 'string', length: 50)]
+    #[ORM\Column(name: 'nom_user', type: 'string', length: 50)]
     protected string $nom;
-    #[ORM\Column(name: 'prenom', type: 'string', length: 50)]
+    #[ORM\Column(name: 'prenom_user', type: 'string', length: 50)]
     protected string $prenom;
 
     #[ORM\Column(name: 'email_user', type: 'string', length: 100, unique: true)]

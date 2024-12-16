@@ -6,8 +6,17 @@
 
     <form action="/inscription" method="POST" class="mx-auto mt-4 w-50">
         <?php if (isset($erreurs)): ?>
-            <p class="form-text text-danger"><?= $erreurs ?></p>
+            <p class="form-text text-danger fw-bold"><?= $erreurs ?></p>
         <?php endif; ?>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom *</label>
+            <input type="text" class="form-control"
+                   name="nom"
+                   id="nom"
+                   placeholder="un nom cool"
+                   value=<?=(!empty($erreurs)) ? $_POST["nom"] : "" ?>
+            >
+        </div>
         <div class="mb-3">
             <label for="prenom" class="form-label">Prénom *</label>
             <input type="text" class="form-control "
@@ -17,15 +26,6 @@
                    value=<?=(!empty($erreurs)) ? $_POST["prenom"] : "" ?>
             >
 
-        </div>
-        <div class="mb-3">
-            <label for="nom" class="form-label">Nom *</label>
-            <input type="text" class="form-control"
-                   name="nom"
-                   id="nom"
-                   placeholder="un nom cool"
-                   value=<?=(!empty($erreurs)) ? $_POST["nom"] : "" ?>
-                   >
         </div>
         <div class="mb-3">
             <label for="Email" class="form-label">Email *</label>
@@ -50,7 +50,7 @@
             <?php if (isset($erreurs["password"])): ?>
                 <div id="emailHelp" class="form-text text-danger"><?= $erreurs["password"] ?></div>
             <?php else: ?>
-                <div id="emailHelp" class="form-text text-light">Votre mot de passe doit contenir au moins 8 caratères, doit
+                <div id="emailHelp" class="form-text">Votre mot de passe doit contenir au moins 8 caratères, doit
                     posséder au moins 1 majuscule, 1 minuscule et 1 chiffre
                 </div>
             <?php endif; ?>

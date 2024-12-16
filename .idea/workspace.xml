@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6d200391-1646-43ba-bdda-9fd3202504d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SanctionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SanctionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserStory/CreateAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserStory/CreateAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/base.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/sanctions/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/sanctions/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/sanctions/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/sanctions/inscription.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +82,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;US-4&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;US-6&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,7 +112,12 @@
       <workItem from="1733237033108" duration="197000" />
       <workItem from="1733237256138" duration="44000" />
       <workItem from="1733237331034" duration="78000" />
-      <workItem from="1733295903395" duration="1074000" />
+      <workItem from="1733295903395" duration="6389000" />
+      <workItem from="1733745804110" duration="695000" />
+      <workItem from="1733746840965" duration="852000" />
+      <workItem from="1733747747189" duration="1316000" />
+      <workItem from="1734336304608" duration="1125000" />
+      <workItem from="1734339937610" duration="795000" />
     </task>
     <servers />
   </component>

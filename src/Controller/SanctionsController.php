@@ -73,7 +73,6 @@ class SanctionsController extends AbstractController
     public function deconnexion(): void {
         if (isset($_SESSION['utilisateur'])) {
             session_destroy();
-            session_start();
             $this->redirect('/');
         }
         $this->redirect('/');

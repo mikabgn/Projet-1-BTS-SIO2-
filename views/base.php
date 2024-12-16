@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +9,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='assets/css/bootstrap.min.css' rel='stylesheet'>
-    <script src='assets/js/bootstrap.min.js'></script>
     <title>Site trop beau</title>
 </head>
 <body>
@@ -19,28 +21,32 @@
         </button>
         <div class='collapse navbar-collapse' id='navbarNav'>
             <ul class='navbar-nav'>
-                <li class='nav-item ms-2'>
-                    <a class='nav-link text-white' href='/'>Accueil</a>
-                </li>
+                <?php if (!isset($_SESSION["utilisateur"])): ?>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="/">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/connexion">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/inscription">Inscription</a>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="/">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="/deconnexion">Déconnexion</a>
+                    </li>
+                <?php endif; ?>
             </ul>
-            <ul class='navbar-nav ms-auto'>
-                <li class='nav-item ms-2'>
-
-                    <a class='nav-link text-white' href='/connexion'>Connexion</a>
-
-                </li>
-                <li class='nav-item ms-2'>
-
-                    <a class='nav-link text-white' href='/inscription'>Crée un compte</a>
-
-                </li>
-            </ul>
-        </div>
         </div>
     </nav>
 </header>
-
-<main class="container mx-auto px-4 flex-grow">
+<p>
+<?= (isset($_SESSION["utilisateur"])) ? "Vous êtes connecté en tant que ".$_SESSION["utilisateur"]["prenom"] : "" ?>
+</p>
+<main class="content container mx-auto px-4 flex-grow">
     <?= $content ?>
 </main>
 
@@ -68,5 +74,6 @@
         </div>
     </div>
 </footer>
+<script src='assets/js/bootstrap.min.js'></script>
 </body>
 </html>
