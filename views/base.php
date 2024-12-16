@@ -36,6 +36,9 @@ session_start();
                         <a class="nav-link active text-white" href="/">Accueil</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active text-white" href="/createPromotion">Créer Promotion</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active text-white" href="/deconnexion">Déconnexion</a>
                     </li>
                 <?php endif; ?>
