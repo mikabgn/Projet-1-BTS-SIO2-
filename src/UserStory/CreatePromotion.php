@@ -1,11 +1,11 @@
 <?php
 
-namespace App\UsersStory;
+namespace App\UserStory;
 
 use App\Entity\Promotion;
 use Doctrine\ORM\EntityManager;
 
-class CreatiePromotion{
+class CreatePromotion{
 
     protected EntityManager $entityManager;
 

@@ -9,11 +9,6 @@ use Doctrine\ORM\Mapping as ORM;
 class Promotion
 {
     #[ORM\Id]
-    #[ORM\Column(name:'id_promo', type: 'integer')]
-    #[ORM\GeneratedValue]
-    protected int $id;
-
-    #[ORM\Id]
     #[ORM\Column(name: 'libelle', type: 'string', length: 50)]
     protected string $libelle;
 

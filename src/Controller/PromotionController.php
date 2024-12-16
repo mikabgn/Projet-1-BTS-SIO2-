@@ -14,7 +14,6 @@ class PromotionController extends AbstractController
      */
     public function __construct(EntityManager $entityManager)
     {
-        session_start();
         $this->entityManager = $entityManager;
     }
     public function createPromotion(){

@@ -12,7 +12,6 @@ class SanctionsController extends AbstractController
     private EntityManager $entityManager;
     public function __construct(EntityManager $entityManager)
     {
-        session_start();
         $this->entityManager=$entityManager;
     }
     public function index(): void
