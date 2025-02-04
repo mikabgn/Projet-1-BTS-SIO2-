@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='assets/css/bootstrap.min.css' rel='stylesheet'>
     <title>Site trop beau</title>
+
 </head>
 <body>
 <header>
@@ -36,6 +37,12 @@
                         <a class="nav-link active text-white" href="/createPromotion">Créer Promotion</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active text-white" href="/importEleve">Importer Elèves</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="/createSanction">Créer Sanction</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active text-white" href="/deconnexion">Déconnexion</a>
                     </li>
                 <?php endif; ?>
@@ -43,8 +50,8 @@
         </div>
     </nav>
 </header>
-<p>
-<?= (isset($_SESSION["utilisateur"])) ? "Vous êtes connecté en tant que ".$_SESSION["utilisateur"]["prenom"] : "" ?>
+<p style="margin-top: 5px">
+<?= (isset($_SESSION["utilisateur"])) ? "Vous êtes connecté en tant que <span style='font-weight: bold'>". $_SESSION["utilisateur"]["prenom"] : "</span>" ?>
 </p>
 <main class="content container mx-auto px-4 flex-grow">
     <?= $content ?>

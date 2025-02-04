@@ -1,10 +1,11 @@
 <?php
 return [
     '/' => ['AccueilController', 'index'],
-    '/sanctions' => ['SanctionsController', 'index'],
-    '/inscription' => ['SanctionsController', 'inscription'],
-    '/connexion' => ['SanctionsController', 'connexion'],
+    '/inscription' => ['AuthentificationController', 'inscription'],
+    '/connexion' => ['AuthentificationController', 'connexion'],
     '/legal' => ['AccueilController', 'legal'],
-    '/deconnexion' => ['SanctionsController', 'deconnexion'],
+    '/deconnexion' => ['AuthentificationController', 'deconnexion'],
     '/createPromotion' => ['PromotionController', 'createPromotion'],
+    '/importEleve'=>['EleveController', 'importEleve'],
+    '/createSanction'=>['SanctionController', 'createSanction'],
 ];
