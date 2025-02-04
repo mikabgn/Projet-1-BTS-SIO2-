@@ -6,60 +6,61 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity]
 #[ORM\Table(name: 'eleves')]
 class Eleve
+
 {
     #[ORM\Id]
-    #[ORM\Column(name: 'id_eleve', type: 'integer')]
+    #[ORM\Column(name:'id_eleve', type: 'integer')]
     #[ORM\GeneratedValue]
-    protected string $idEleve;
+    protected int $id;
 
     #[ORM\Column(name: 'nom_eleve', type: 'string', length: 50)]
-    protected string $nomEleve;
-
+    protected string $nom;
     #[ORM\Column(name: 'prenom_eleve', type: 'string', length: 50)]
-    protected string $prenomEleve;
+    protected string $prenom;
 
     #[ORM\ManyToOne(targetEntity: Promotion::class)]
-    #[ORM\joinColumn(name: 'id_promo',referencedColumnName: 'id_promo', nullable: false)]
-    protected Promotion $promotion;
+    #[ORM\JoinColumn(name: 'id_promo',referencedColumnName: 'id_promotion', nullable: false)]
+    protected Promotion $idPromotion;
 
     public function getId(): int
     {
-        return $this->idEleve;
+        return $this->id;
     }
 
-    public function setId(int $idEleve): void
+    public function setId(int $id): void
     {
-        $this->idEleve = $idEleve;
+        $this->id = $id;
     }
 
     public function getNom(): string
     {
-        return $this->nomEleve;
+        return $this->nom;
     }
 
-    public function setNom(string $nomEleve): void
+    public function setNom(string $nom): void
     {
-        $this->nom = $nomEleve;
+        $this->nom = $nom;
     }
 
     public function getPrenom(): string
     {
-        return $this->prenomEleve;
+        return $this->prenom;
     }
 
-    public function setPrenom(string $prenomEleve): void
+    public function setPrenom(string $prenom): void
     {
-        $this->prenom = $prenomEleve;
+        $this->prenom = $prenom;
     }
 
     public function getIdPromotion(): Promotion
     {
-        return $this->idPromo;
+        return $this->idPromotion;
     }
 
-    public function setIdPromotion(Promotion $idPromo): void
+    public function setIdPromotion(Promotion $idPromotion): void
     {
-        $this->idPromo = $idPromo;
+        $this->idPromotion = $idPromotion;
     }
+
 
 }
