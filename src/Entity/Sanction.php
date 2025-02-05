@@ -9,8 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Sanction
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
     #[ORM\Column(name:'id_sanction',type:'integer')]
+    #[ORM\GeneratedValue]
     protected int $id;
 
 
@@ -20,29 +20,40 @@ class Sanction
     private Eleve $eleve;
 
 
-    #[ORM\Column(type:"string", length:255)]
+    #[ORM\Column(name:'demandeur_sanction',type:"string", length:255)]
 
     private string $demandeur;
-
 
     #[ORM\ManyToOne(targetEntity: Motif::class)]
     #[ORM\JoinColumn(name: 'id_motif',referencedColumnName: 'id', nullable: false)]
 
     private ?Motif $motif;
 
-    #[ORM\Column(type:"string", length:255, nullable:true)]
+    #[ORM\Column(name: 'description_motif',type:"string", length:255, nullable:true)]
 
     private ?string $descriptionMotif;
 
 
-    #[ORM\Column(type:"datetime")]
+    #[ORM\Column(name: 'date_incident', type:"datetime")]
 
     private \DateTime $dateIncident;
 
+    #[ORM\Column(name: 'date_creation_sanction', type:"datetime")]
 
-    #[ORM\Column(type:"string", length:255)]
+    private \DateTime $dateCreation;
+    #[ORM\Column(name: "createur_sanction", type:"string", length:255)]
 
     private string $creePar;
+
+    public function getDateCreation(): \DateTime
+    {
+        return $this->dateCreation;
+    }
+
+    public function setDateCreation(\DateTime $dateCreation): void
+    {
+        $this->dateCreation = $dateCreation;
+    }
 
     public function getId(): int
     {

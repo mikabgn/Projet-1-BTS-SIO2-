@@ -10,13 +10,13 @@ class Motif
 {
 
     #[ORM\Id]
+    #[ORM\Column(name:"id" ,type:"integer")]
     #[ORM\GeneratedValue]
-    #[ORM\Column(type:"integer")]
 
     private int $id;
 
 
-    #[ORM\Column(type:"string", length:255)]
+    #[ORM\Column(name:"libelle", type:"string", length:255)]
 
     private string $libelle;
 

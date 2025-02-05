@@ -22,8 +22,10 @@ class CreateSanction
         ?int   $motifId,
         string $descriptionMotif,
         string $dateIncident,
+        \DateTime $dateCreation,
         string $demandeur,
-        string $creePar
+        string $creePar,
+
     ): Sanction
     {
         if (empty($eleveId) || empty($descriptionMotif) || empty($dateIncident) || empty($demandeur)) {
@@ -44,8 +46,10 @@ class CreateSanction
         $sanction->setMotif($motif);
         $sanction->setDescriptionMotif($descriptionMotif);
         $sanction->setDateIncident(new \DateTime($dateIncident));
+        $sanction->setDateCreation($dateCreation);
         $sanction->setDemandeur($demandeur);
         $sanction->setCreePar($creePar);
+
 
         $this->entityManager->persist($sanction);
         $this->entityManager->flush();

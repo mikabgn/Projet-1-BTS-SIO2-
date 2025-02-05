@@ -9,10 +9,10 @@ abstract class AbstractController
         extract($data);
 
         ob_start();
-        require __DIR__ . '/../../views/' . $template . '.php';
+        require __DIR__ . '\..\..\views\\' . $template . '.php';
         $content = ob_get_clean();
 
-        require __DIR__ . '/../../views/base.php';
+        require __DIR__ . '\..\..\views\base.php';
     }
 
     protected function redirect(string $url): void

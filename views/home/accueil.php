@@ -18,5 +18,8 @@
         <p class='text-center mb-4'>Nous espérons que ce site vous sera utile et que vous pourrez y trouver toutes les réponses à vos questions. Si vous avez besoin de plus d'informations ou si vous avez des suggestions pour améliorer notre plateforme, n'hésitez pas à nous contacter. Nous sommes là pour vous aider et pour garantir un environnement scolaire sain et respectueux pour tous.</p>
     </div>
 </section>
+
+
+
 </body>
 </html>
