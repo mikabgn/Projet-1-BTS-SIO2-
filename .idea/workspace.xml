@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d200391-1646-43ba-bdda-9fd3202504d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projet-sanctions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet-sanctions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AbstractController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AbstractController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SanctionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SanctionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Motif.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Motif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Sanction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Sanction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserStory/CreateSanction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserStory/CreateSanction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/authentification/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/authentification/inscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/sanction/creationSanction.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/sanction/creationSanction.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,11 +150,25 @@
       <workItem from="1738663663105" duration="3484000" />
       <workItem from="1738674490225" duration="5864000" />
       <workItem from="1738739162210" duration="6253000" />
-      <workItem from="1738758223666" duration="2167000" />
+      <workItem from="1738758223666" duration="2422000" />
+      <workItem from="1741610340693" duration="1151000" />
+      <workItem from="1744099915255" duration="3753000" />
+      <workItem from="1744179156749" duration="1225000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/views/eleve/importerEleve.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

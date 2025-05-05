@@ -49,7 +49,7 @@
         <input type="date" name="dateIncident" id="dateIncident" class="form-control" required>
     </div>
 
-    <button type="submit" class="btn btn-primary mt-3" style="" data-bs-toggle="modal" data-bs-target="#projetModalE1">Créer la sanction</button>
+    <button type="submit" class="btn btn-primary mt-3" style="margin-bottom: 135px" data-bs-toggle="modal" data-bs-target="#projetModalE1">Créer la sanction</button>
 
     <!-- Modal -->
     <div class="modal fade" id="projetModalE1" tabindex="-1">

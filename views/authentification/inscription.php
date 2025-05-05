@@ -1,6 +1,6 @@
 
 
-<body style="margin-top: 100px">
+<body style="margin-top: 100px; margin-bottom: 100px">
 <div class=" container mt-5 ">
     <h1 class="text-center">Inscription</h1>
 
@@ -25,7 +25,6 @@
                    placeholder="un prenom cool"
                    value=<?=(!empty($erreurs)) ? $_POST["prenom"] : "" ?>
             >
-
         </div>
         <div class="mb-3">
             <label for="Email" class="form-label">Email *</label>
