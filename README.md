@@ -13,7 +13,7 @@
  Ouvrir un invite de commande, et lancer les commandes suivantes dans le répertoire où vous souhaitez mettre le projet.
  
  ```bash
- git clone https://github.com/ArthurColleu/gestion_sanctions
+ git clone https://github.com/mikabgn/Projet-1-BTS-SIO2-
  cd gestion_sanctions
  composer install
  ```
